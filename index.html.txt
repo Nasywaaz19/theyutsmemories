@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed Instagram - Nasywa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="ig-container">
+    <div class="ig-header">
+        <div class="profile-pic">
+            <img src="https://picsum.photos/150" alt="Foto Profil">
+        </div>
+        <div class="profile-stats">
+            <div class="stat-box">
+                <h4>12</h4>
+                <p>Posts</p>
+            </div>
+            <div class="stat-box">
+                <h4>999</h4>
+                <p>Followers</p>
+            </div>
+            <div class="stat-box">
+                <h4>10</h4>
+                <p>Following</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bio">
+        <h3>Nasywa ✨</h3>
+        <p>Welcome to my visual diary! 📸</p>
+    </div>
+
+    <div class="ig-tabs">
+        <div class="tab active">▦</div>
+        <div class="tab">▶</div>
+        <div class="tab">👤</div>
+    </div>
+
+    <div class="ig-grid">
+        
+        <a href="https://www.instagram.com/p/CONTOH_LINK_1/" target="_blank" class="grid-item">
+            <img src="https://picsum.photos/400?random=1" alt="Post 1">
+        </a>
+
+        <a href="https://www.instagram.com/p/CONTOH_LINK_2/" target="_blank" class="grid-item">
+            <img src="https://picsum.photos/400?random=2" alt="Post 2">
+        </a>
+
+        <a href="https://www.instagram.com/p/CONTOH_LINK_3/" target="_blank" class="grid-item">
+            <img src="https://picsum.photos/400?random=3" alt="Post 3">
+        </a>
+
+        <a href="https://www.instagram.com/p/CONTOH_LINK_4/" target="_blank" class="grid-item">
+            <img src="https://picsum.photos/400?random=4" alt="Post 4">
+        </a>
+
+        <a href="https://www.instagram.com/p/CONTOH_LINK_5/" target="_blank" class="grid-item">
+            <img src="https://picsum.photos/400?random=5" alt="Post 5">
+        </a>
+
+        <a href="https://www.instagram.com/p/CONTOH_LINK_6/" target="_blank" class="grid-item">
+            <img src="https://picsum.photos/400?random=6" alt="Post 6">
+        </a>
+
+    </div>
+</div>
+
+</body>
+</html>
