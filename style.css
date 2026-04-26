@@ -1,0 +1,214 @@
+/* =========================================
+   STYLE UNTUK KOTAK KENANGAN
+   ========================================= */
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    /* Menggunakan font seperti tulisan tangan biar estetik */
+    font-family: 'Patrick Hand', cursive; 
+}
+
+body {
+    /* Background warna pastel pink yang lembut */
+    background: #ffe6ea; 
+    color: #4a4a4a;
+    padding-bottom: 100px; /* Jarak untuk player musik di bawah */
+}
+
+/* --- HEADER --- */
+.header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.header h1 {
+    font-size: 40px;
+    color: #ff6b81;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.header p {
+    font-size: 20px;
+    color: #7bed9f; /* Warna hijau pastel */
+    color: #a4b0be;
+}
+
+/* --- GRID AMPLOP KOTAK SURAT --- */
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Bikin jadi 2 kolom */
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.mail-box {
+    background: white;
+    border-radius: 20px;
+    padding: 25px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #4a4a4a;
+    box-shadow: 0 8px 15px rgba(255, 107, 129, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px dashed #ffb8c6; /* Garis putus-putus lucu */
+}
+
+.mail-box:hover, .mail-box:active {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 20px rgba(255, 107, 129, 0.3);
+    border-color: #ff6b81;
+}
+
+.envelope {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.mail-box p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* --- POP-UP POLAROID EFEK --- */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Disembunyikan secara default */
+    visibility: hidden; 
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* RAHASIA POP-UP BISA MUNCUL PAS DIKLIK */
+.popup-overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-card {
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.popup-overlay:target .popup-card {
+    transform: scale(1) rotate(-2deg); /* Efek polaroid miring dikit */
+}
+
+/* Tombol Silang (Close) */
+.close-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #ff4757;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.polaroid {
+    background: white;
+    padding: 15px 15px 35px 15px; /* Padding bawah lebih lebar ala polaroid */
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    width: 280px;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background: #f1f2f6; /* Warna placeholder kalau foto belum ada */
+    border-radius: 3px;
+}
+
+.caption {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.caption h3 {
+    font-size: 24px;
+    color: #ff6b81;
+}
+
+.caption p {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-top: 5px;
+}
+
+/* --- PEMUTAR MUSIK DI BAWAH --- */
+.music-controller {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 350px;
+    z-index: 100;
+}
+
+.music-card {
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #4a4a4a;
+    box-shadow: 0 10px 25px rgba(255, 107, 129, 0.3);
+    border: 2px solid #ffe6ea;
+}
+
+.music-icon {
+    font-size: 24px;
+    background: #ff6b81;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.music-info h4 {
+    font-size: 18px;
+    margin-bottom: -2px;
+}
+
+.music-info p {
+    font-size: 14px;
+    color: #a4b0be;
+}
